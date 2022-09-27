@@ -9,16 +9,18 @@
 1. Clone o repositório para o servidor utilizando o comando abaixo:
 
 ```
-server# git clone https://gitlab.intranet.domain.com/servidores/linux/zimbra-find-hacked-accounts.git
+server# git clonehttps://github.com/michelpetterson/zimbra-find-hacked-accounts.git
 ```
 
-2. Com usuário do zimbra, configure no cron:
+2. Ajuste os parâmetros no começo do arquivo findHackedAccount.sh
+
+3. Com usuário do zimbra, configure no cron:
 
 ```
 server# crontab -e
 ```
 
-3. Adicione ao crontab:
+4. Adicione ao crontab:
 ```
 */5 * * * * cd /opt/zimbra/scripts/spam-utils/findHackedAccounts; bash -x findHackedAccount.sh
 ```
